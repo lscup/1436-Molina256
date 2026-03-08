@@ -11,6 +11,11 @@ int main() {
     float total_points_earned = 0.00;
     float total_percentage_earned = 0.00;
 
+    float assignment_score = 0.00;
+    char earned_grade;
+    bool score_input = true;
+    int assignment = 1;
+
     // Welcome message
     std::cout << "Welcome to Your Grade Calculator!" << std::endl;
     std::cout << std::endl;
@@ -43,36 +48,12 @@ int main() {
     std::cout << "Points needed for a 'B': " << B_points << std::endl;
     std::cout << "Points needed for a 'C': " << C_points << std::endl;
     std::cout << "Points needed for a 'D': " << D_points << std::endl;
+    std::cout << std::endl;
 
     // Grade Calculation
-    std::cout << "\nGrade Calculation\n";
-    std::cout << "Please input the total of all points earned in the course: ";
-    std::cin >> total_points_earned;
-    std::cout << '\n';
-
-    // Determine the final grade
-    if (total_points_earned >= A_points) {
-        std::cout << "You earned a final grade of: 'A' at: ";
-    }
-    else if (total_points_earned >= B_points) {
-        std::cout << "You earned a final grade of: 'B' at: ";
-    }
-    else if (total_points_earned >= C_points) {
-        std::cout << "You earned a final grade of: 'C' at: ";
-    }
-    else if (total_points_earned >= D_points) {
-        std::cout << "You earned a final grade of: 'D' at: ";
-    }
-    else {
-        std::cout << "You earned a final grade of: 'F' at: ";
-    }
-
-    // Calculate and display percentage
-    total_percentage_earned = (total_points_earned / total_course_points) * 100;
-    std::cout << total_percentage_earned << '%' << '\n';
-
     // Multiple Assignment Input
     std::cout << "Grade Calculation\n";
+    std::cout << "====================" << std::endl;
     std::cout << "You will be prompted to input scores for all assignments.\n";
     std::cout << "(Input a negative number to cease input and calculate letter grade.)\n\n";
 
